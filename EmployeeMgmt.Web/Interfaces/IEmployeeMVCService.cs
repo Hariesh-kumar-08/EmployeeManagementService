@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-public interface IEmployeeService
+public interface IEmployeeMVCService
 {
     Task<IEnumerable<EmployeeDTO>> GetAllEmployeesAsync();
     Task<EmployeeDTO> GetEmployeeByIdAsync(int id);

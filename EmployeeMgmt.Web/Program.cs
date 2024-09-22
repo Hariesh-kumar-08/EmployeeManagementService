@@ -4,8 +4,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
-
+builder.Services.AddHttpClient<IEmployeeMVCService, EmployeeMVCService>();
+builder.Services.AddScoped<IDepartmentMVCService, DepartmentMVCService>();
+builder.Services.AddScoped<IEmployeeMVCService,EmployeeMVCService>();
 builder.Services.AddScoped<ITokenService, TokenService>();
 
 var app = builder.Build();

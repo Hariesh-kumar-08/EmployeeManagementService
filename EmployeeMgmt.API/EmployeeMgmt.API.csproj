@@ -17,7 +17,6 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="8.0.2" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
     <ProjectReference Include="..\EmployeeMgmt.Application\EmployeeMgmt.Application.csproj" />
 	  <ProjectReference Include="..\EmployeeMgmt.Infrastructure\EmployeeMgmt.Infrastructure.csproj" />

@@ -1,0 +1,59 @@
+﻿@model IEnumerable<EmployeeMgmt.Application.DTOs.DepartmentDTO>
+
+@{
+    ViewData["Title"] = "Department List";
+}
+
+<h2 class="text-center mt-4">Department List</h2>
+
+<div class="container mt-4">
+    <div class="table-responsive">
+        <table class="table table-hover table-striped table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>#</th>
+                    <th>Department Name</th>
+                    <th>Description</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.Any())
+                {
+                    int index = 1;
+                    foreach (var department in Model)
+                    {
+                        <tr>
+                            <td>@index</td>
+                            <td>@department.DepartmentName</td>
+                            <td>@department.Description</td>
+                            <td>
+                                <a asp-action="Details" asp-route-id="@department.DepartmentId" class="btn btn-info btn-sm">
+                                    <i class="fas fa-info-circle"></i> Details
+                                </a>
+                                <a asp-action="Edit" asp-route-id="@department.DepartmentId" class="btn btn-warning btn-sm">
+                                    <i class="fas fa-edit"></i> Edit
+                                </a>
+                                <a asp-action="Delete" asp-route-id="@department.DepartmentId" class="btn btn-danger btn-sm">
+                                    <i class="fas fa-trash-alt"></i> Delete
+                                </a>
+                            </td>
+                        </tr>
+                        index++;
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="4" class="text-center">No departments found.</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="text-right mt-3">
+        <a asp-action="Create" class="btn btn-success">
+            <i class="fas fa-plus"></i> Add New Department
+        </a>
+    </div>
+</div>

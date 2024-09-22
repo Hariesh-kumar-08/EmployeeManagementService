@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeMgmt.Application", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeMgmt.API", "EmployeeMgmt.API\EmployeeMgmt.API.csproj", "{8FFF860E-7013-4667-9959-89011BE5E304}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeMgmt.Web", "EmployeeMgmt.Web\EmployeeMgmt.Web.csproj", "{DE21AC22-1091-49AE-B445-B216E6D98365}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeMgmt.Web", "EmployeeMgmt.Web\EmployeeMgmt.Web.csproj", "{DE21AC22-1091-49AE-B445-B216E6D98365}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeMgmt.Tests", "EmployeeMgmt.Tests\EmployeeMgmt.Tests.csproj", "{F020131A-5B0D-42F8-8DFE-B208237EE551}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{DE21AC22-1091-49AE-B445-B216E6D98365}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE21AC22-1091-49AE-B445-B216E6D98365}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE21AC22-1091-49AE-B445-B216E6D98365}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F020131A-5B0D-42F8-8DFE-B208237EE551}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F020131A-5B0D-42F8-8DFE-B208237EE551}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F020131A-5B0D-42F8-8DFE-B208237EE551}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F020131A-5B0D-42F8-8DFE-B208237EE551}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

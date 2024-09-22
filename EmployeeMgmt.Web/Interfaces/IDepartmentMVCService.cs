@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-public interface IDepartmentService
+public interface IDepartmentMVCService
 {
     Task<IEnumerable<DepartmentDTO>> GetAllDepartmentsAsync();
     Task<DepartmentDTO> GetDepartmentByIdAsync(int id);

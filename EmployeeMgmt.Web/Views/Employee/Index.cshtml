@@ -1,0 +1,66 @@
+﻿@model IEnumerable<EmployeeMgmt.Application.DTOs.EmployeeDTO>
+
+@{
+    ViewData["Title"] = "Employee List";
+}
+
+<h2 class="text-center mt-4">Employee List</h2>
+
+<div class="container mt-4">
+    <div class="table-responsive">
+        <table class="table table-hover table-striped table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>#</th>
+                    <th>Employee Code</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Hire Date</th>
+                   @*  <th>Department</th> *@
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.Any())
+                {
+                    int index = 1;
+                    foreach (var employee in Model)
+                    {
+                        <tr>
+                            <td>@index</td>
+                            <td>@employee.EmployeeCode</td>
+                            <td>@employee.Name</td>
+                            <td>@employee.Email</td>
+                            <td>@employee.HireDate.ToString("MMMM dd, yyyy")</td>
+                            @* <td>@employee.DepartmentId</td> *@
+                            <td>
+                                <a asp-action="Details" asp-route-id="@employee.EmployeeId" class="btn btn-info btn-sm">
+                                    <i class="fas fa-info-circle"></i> Details
+                                </a>
+                                <a asp-action="Edit" asp-route-id="@employee.EmployeeId" class="btn btn-warning btn-sm">
+                                    <i class="fas fa-edit"></i> Edit
+                                </a>
+                                <a asp-action="Delete" asp-route-id="@employee.EmployeeId" class="btn btn-danger btn-sm">
+                                    <i class="fas fa-trash-alt"></i> Delete
+                                </a>
+                            </td>
+                        </tr>
+                        index++;
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="7" class="text-center">No employees found.</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="text-right mt-3">
+        <a asp-action="Create" class="btn btn-success">
+            <i class="fas fa-plus"></i> Add New Employee
+        </a>
+    </div>
+</div>
+

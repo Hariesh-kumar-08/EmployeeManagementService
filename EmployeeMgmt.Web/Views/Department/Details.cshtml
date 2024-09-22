@@ -1,0 +1,27 @@
+﻿@model EmployeeMgmt.Application.DTOs.DepartmentDTO
+
+@{
+    ViewData["Title"] = "Department Details";
+}
+
+<div class="container">
+    <div class="card mx-auto" style="width: 30rem; background-image: linear-gradient(to right, #43cea2, #1890ff);">
+        <div class="card-header">
+            <h5 class="card-title">Department Details</h5>
+        </div>
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-3">Department Name:</dt>
+                <dd class="col-sm-9">@Model.DepartmentName</dd>
+
+                <dt class="col-sm-3">Description:</dt>
+                <dd class="col-sm-9">@Model.Description</dd>
+            </dl>
+        </div>
+    </div>
+
+    <div class="text-center mt-3">
+        <a asp-action="Edit" asp-route-id="@Model.DepartmentId" class="btn btn-primary">Edit</a>
+        <a asp-action="Index" class="btn btn-light">Back to List</a>
+    </div>
+</div>

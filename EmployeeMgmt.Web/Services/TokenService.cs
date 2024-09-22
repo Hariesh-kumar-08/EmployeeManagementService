@@ -34,6 +34,7 @@ namespace EmployeeMgmt.Web.Services
                 issuer: issuer,
                 audience: audience,
                 claims: claims,
+                notBefore: DateTime.Now,
                 expires: DateTime.Now.AddHours(tokenExpiry),
                 signingCredentials: credentials);
 
