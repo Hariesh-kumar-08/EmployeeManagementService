@@ -65,13 +65,13 @@ The project is divided into multiple layers and follows **Domain-Driven Design (
       ```
 
 3. **Apply Migrations**:
-    Run the following commands to apply the database migrations:
-    ```bash
-    cd src/EmployeeMgmt.API
-    dotnet ef database update
-    ```
+    Run the following commands to apply the database migrations from the Package Manager Console of Infrastructure Project:
+    - Add-Migration InitialCreate -StartupProject EmployeeMgmt.API -OutputDir Migrations
+    - Update-Database -StartupProject EmployeeMgmt.API
 
-4. **Seeding Data**:
+
+
+5. **Seeding Data**:
     - The project includes an `AppDbInitializer` class for seeding initial data. This will run automatically on the first application startup.
 
 ---
@@ -126,18 +126,18 @@ The project is divided into multiple layers and follows **Domain-Driven Design (
     dotnet test
     ```
 
-- Unit tests cover repository and service logic. The tests ensure correctness of CRUD operations, business rule enforcement, and error handling.
+- Unit tests cover repository logic. The tests ensure correctness of CRUD operations, business rule enforcement, and error handling.
 
 ---
 
 ## API Endpoints
 
 1. **Employee Endpoints**:
-    - `GET /api/employees`: Retrieve all employees.
-    - `GET /api/employees/{id}`: Retrieve employee by ID.
-    - `POST /api/employees`: Add a new employee.
-    - `PUT /api/employees/{id}`: Update an existing employee.
-    - `DELETE /api/employees/{id}`: Delete an employee.
+    - `GET /api/employee`: Retrieve all employees.
+    - `GET /api/employee/{id}`: Retrieve employee by ID.
+    - `POST /api/employee`: Add a new employee.
+    - `PUT /api/employee/{id}`: Update an existing employee.
+    - `DELETE /api/employee/{id}`: Delete an employee.
 
 2. **Department Endpoints**:
     - Similar CRUD operations for departments.
