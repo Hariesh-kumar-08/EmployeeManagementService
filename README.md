@@ -90,7 +90,7 @@ The project is divided into multiple layers and follows **Domain-Driven Design (
    - Services orchestrate complex business logic, ensuring a clear separation between domain logic and the infrastructure layer. This provides scalability and adaptability for future changes or feature enhancements.
 
 ### 4. **JWT Authentication**
-   - The API layer implements JWT-based authentication to secure endpoints. This ensures that only authenticated users can perform operations, adding an extra layer of security to the system.
+   - The API layer implements JWT-based authentication to secure endpoints. This ensures that only reqyests with proper token can perform operations, adding an extra layer of security to the system.
 
 ### 5. **Logging & Error Handling**
    - `ILogger` is used for logging errors and information. Logs follow a structured pattern to ensure easy debugging, including method names and error details.
