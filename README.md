@@ -37,7 +37,7 @@ The project is divided into multiple layers and follows **Domain-Driven Design (
 
 - **MVC Web Layer**: The **Razor Pages/MVC application** that consumes the API and provides a UI for the system. It manages **Employee** and **Department** forms and lists.
 
-- **Tests Layer**: Contains unit tests written with **XUnit** and **FluentAssertions** for ensuring the correctness of repository and service classes.
+- **Tests Layer**: Contains unit tests written with **XUnit** and **FluentAssertions** for ensuring the correctness of repository classes.
 
 ---
 
