@@ -106,12 +106,12 @@ builder.Services.AddAuthorization();
 //services.AddScoped<IDepartmentRepository, DepartmentRepository>();
 var app = builder.Build();
 
-// Create the database and seed data
-//using (var scope = app.Services.CreateScope())
-//{
-//    var dbContext = scope.ServiceProvider.GetRequiredService<EmployeeManagementDbContext>();
-//    AppDbInitializer.SeedData(dbContext);
-//}
+//Create the database and seed data
+using (var scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<EmployeeManagementDbContext>();
+    AppDbInitializer.SeedData(dbContext);
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
