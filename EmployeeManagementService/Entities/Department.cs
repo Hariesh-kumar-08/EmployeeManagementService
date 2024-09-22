@@ -20,6 +20,6 @@ namespace EmployeeMgmt.Domain.Entities
         public string Description { get; set; }
 
         // Navigation Property to Employees (One-to-Many relationship)
-        public ICollection<Employee> Employees { get; set; }
+        public ICollection<Employee> Employees { get; set; } = new HashSet<Employee>();
     }
 }

@@ -1,33 +1,46 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using EmployeeMgmt.Domain.ValueObjects;
 
 namespace EmployeeMgmt.Domain.Entities
 {
     public class Employee
     {
         [Key]
-        public int EmployeeId { get; set; }
+        public int EmployeeId { get; set; }  // Changed to int
 
         [Required]
-        [MaxLength(10)]
-        public string EmployeeCode { get; set; }
+        public EmployeeCode EmployeeCode { get; private set; }
 
         [Required]
         [MaxLength(100)]
-        public string Name { get; set; }
+        public string Name { get; private set; }
 
         [Required]
-        [EmailAddress]
-        public string Email { get; set; }
+        public EmailAddress Email { get; private set; }
 
         [Required]
-        public DateTime HireDate { get; set; }
+        public DateTime HireDate { get; private set; }
 
-        // Foreign Key for Department
         [ForeignKey("Department")]
-        public int DepartmentId { get; set; }
+        public int DepartmentId { get; set; }  // Foreign key for department
 
-        // Navigation Property to the Department
         public Department Department { get; set; }
+
+        // Parameterless constructor for EF
+        public Employee() { }
+
+
+        // Constructor to initialize an Employee object
+        public Employee(EmployeeCode employeeCode, string name, EmailAddress email, DateTime hireDate, int departmentId)
+        {
+            EmployeeCode = employeeCode;
+            Name = name;
+            Email = email;
+            HireDate = hireDate;
+            DepartmentId = departmentId;
+        }
+
+       
     }
 }

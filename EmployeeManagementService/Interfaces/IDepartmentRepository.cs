@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace EmployeeMgmt.Domain.Interfaces
 {
-    internal interface IDepartmentRepository :IRepository<Department>
+    public interface IDepartmentRepository :IRepository<Department>
     {
+        
     }
 }
